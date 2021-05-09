@@ -37,11 +37,11 @@ class CertificatesApi(object):
         """Add the certificate to the keystore.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.add_certificate(external_certificate, certificate_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.add_certificate(external_certificate, certificate_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str external_certificate: The IP:PORT of system associated with this certificate. (required)
         :param CertificatePayload certificate_payload: (required)
         :return: Certificate
@@ -49,7 +49,7 @@ class CertificatesApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.add_certificate_with_http_info(external_certificate, certificate_payload, **kwargs)  # noqa: E501
         else:
             (data) = self.add_certificate_with_http_info(external_certificate, certificate_payload, **kwargs)  # noqa: E501
@@ -59,11 +59,11 @@ class CertificatesApi(object):
         """Add the certificate to the keystore.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.add_certificate_with_http_info(external_certificate, certificate_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.add_certificate_with_http_info(external_certificate, certificate_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str external_certificate: The IP:PORT of system associated with this certificate. (required)
         :param CertificatePayload certificate_payload: (required)
         :return: Certificate
@@ -72,7 +72,7 @@ class CertificatesApi(object):
         """
 
         all_params = ['external_certificate', 'certificate_payload']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -132,7 +132,7 @@ class CertificatesApi(object):
             files=local_var_files,
             response_type='Certificate',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -142,18 +142,18 @@ class CertificatesApi(object):
         """Fetches the SSL Certificate of an external system  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.external_certificates_untrusted_external_certificate_get(external_certificate, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.external_certificates_untrusted_external_certificate_get(external_certificate, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str external_certificate: The IP:PORT of system associated with this certificate. (required)
         :return: Certificate
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.external_certificates_untrusted_external_certificate_get_with_http_info(external_certificate, **kwargs)  # noqa: E501
         else:
             (data) = self.external_certificates_untrusted_external_certificate_get_with_http_info(external_certificate, **kwargs)  # noqa: E501
@@ -163,11 +163,11 @@ class CertificatesApi(object):
         """Fetches the SSL Certificate of an external system  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.external_certificates_untrusted_external_certificate_get_with_http_info(external_certificate, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.external_certificates_untrusted_external_certificate_get_with_http_info(external_certificate, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str external_certificate: The IP:PORT of system associated with this certificate. (required)
         :return: Certificate
                  If the method is called asynchronously,
@@ -175,7 +175,7 @@ class CertificatesApi(object):
         """
 
         all_params = ['external_certificate']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -225,7 +225,7 @@ class CertificatesApi(object):
             files=local_var_files,
             response_type='Certificate',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -235,18 +235,18 @@ class CertificatesApi(object):
         """Fetch the certificate from the keystore.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_trusted_certificate(external_certificate, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_trusted_certificate(external_certificate, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str external_certificate: The IP:PORT of system associated with this certificate. (required)
         :return: Certificate
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_trusted_certificate_with_http_info(external_certificate, **kwargs)  # noqa: E501
         else:
             (data) = self.get_trusted_certificate_with_http_info(external_certificate, **kwargs)  # noqa: E501
@@ -256,11 +256,11 @@ class CertificatesApi(object):
         """Fetch the certificate from the keystore.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_trusted_certificate_with_http_info(external_certificate, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_trusted_certificate_with_http_info(external_certificate, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str external_certificate: The IP:PORT of system associated with this certificate. (required)
         :return: Certificate
                  If the method is called asynchronously,
@@ -268,7 +268,7 @@ class CertificatesApi(object):
         """
 
         all_params = ['external_certificate']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -318,7 +318,7 @@ class CertificatesApi(object):
             files=local_var_files,
             response_type='Certificate',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -328,18 +328,18 @@ class CertificatesApi(object):
         """Remove the certificate from the keystore.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.remove_certificate(external_certificate, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.remove_certificate(external_certificate, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str external_certificate: The IP:PORT of system associated with this certificate. (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.remove_certificate_with_http_info(external_certificate, **kwargs)  # noqa: E501
         else:
             (data) = self.remove_certificate_with_http_info(external_certificate, **kwargs)  # noqa: E501
@@ -349,11 +349,11 @@ class CertificatesApi(object):
         """Remove the certificate from the keystore.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.remove_certificate_with_http_info(external_certificate, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.remove_certificate_with_http_info(external_certificate, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str external_certificate: The IP:PORT of system associated with this certificate. (required)
         :return: None
                  If the method is called asynchronously,
@@ -361,7 +361,7 @@ class CertificatesApi(object):
         """
 
         all_params = ['external_certificate']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -407,7 +407,7 @@ class CertificatesApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

@@ -37,11 +37,11 @@ class MetaVolumeApi(object):
         """Create a new MetaVolume  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_meta_volume(cluster_name, meta_volume_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.create_meta_volume(cluster_name, meta_volume_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param MetaVolumePayload meta_volume_payload: (required)
         :param str x_include_object: When passed as part of a POST request, controls whether the representation of the newly created object is included in the response. Defaults to 'true' which will include the object in the response. This header is useful because refreshing the newly created object is usually the slowest part of a POST operation. 
@@ -50,7 +50,7 @@ class MetaVolumeApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.create_meta_volume_with_http_info(cluster_name, meta_volume_payload, **kwargs)  # noqa: E501
         else:
             (data) = self.create_meta_volume_with_http_info(cluster_name, meta_volume_payload, **kwargs)  # noqa: E501
@@ -60,11 +60,11 @@ class MetaVolumeApi(object):
         """Create a new MetaVolume  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_meta_volume_with_http_info(cluster_name, meta_volume_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.create_meta_volume_with_http_info(cluster_name, meta_volume_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param MetaVolumePayload meta_volume_payload: (required)
         :param str x_include_object: When passed as part of a POST request, controls whether the representation of the newly created object is included in the response. Defaults to 'true' which will include the object in the response. This header is useful because refreshing the newly created object is usually the slowest part of a POST operation. 
@@ -74,7 +74,7 @@ class MetaVolumeApi(object):
         """
 
         all_params = ['cluster_name', 'meta_volume_payload', 'x_include_object']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -128,7 +128,7 @@ class MetaVolumeApi(object):
             files=local_var_files,
             response_type='MetaVolume',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -138,11 +138,11 @@ class MetaVolumeApi(object):
         """Deletes a single MetaVolume  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_meta_volume(cluster_name, name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.delete_meta_volume(cluster_name, name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: The name of a specific instance of the resource (required)
         :return: None
@@ -150,7 +150,7 @@ class MetaVolumeApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.delete_meta_volume_with_http_info(cluster_name, name, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_meta_volume_with_http_info(cluster_name, name, **kwargs)  # noqa: E501
@@ -160,11 +160,11 @@ class MetaVolumeApi(object):
         """Deletes a single MetaVolume  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_meta_volume_with_http_info(cluster_name, name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.delete_meta_volume_with_http_info(cluster_name, name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: The name of a specific instance of the resource (required)
         :return: None
@@ -173,7 +173,7 @@ class MetaVolumeApi(object):
         """
 
         all_params = ['cluster_name', 'name']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -225,7 +225,7 @@ class MetaVolumeApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -235,11 +235,11 @@ class MetaVolumeApi(object):
         """Returns a single MetaVolume by name  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_meta_volume(cluster_name, name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_meta_volume(cluster_name, name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: The name of a specific instance of the resource (required)
         :param str fields: Select which fields are included in the response. 'name' is always included. See FieldSelectionExpression for details. 
@@ -248,7 +248,7 @@ class MetaVolumeApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_meta_volume_with_http_info(cluster_name, name, **kwargs)  # noqa: E501
         else:
             (data) = self.get_meta_volume_with_http_info(cluster_name, name, **kwargs)  # noqa: E501
@@ -258,11 +258,11 @@ class MetaVolumeApi(object):
         """Returns a single MetaVolume by name  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_meta_volume_with_http_info(cluster_name, name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_meta_volume_with_http_info(cluster_name, name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: The name of a specific instance of the resource (required)
         :param str fields: Select which fields are included in the response. 'name' is always included. See FieldSelectionExpression for details. 
@@ -272,7 +272,7 @@ class MetaVolumeApi(object):
         """
 
         all_params = ['cluster_name', 'name', 'fields']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -326,7 +326,7 @@ class MetaVolumeApi(object):
             files=local_var_files,
             response_type='MetaVolume',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -336,11 +336,11 @@ class MetaVolumeApi(object):
         """Returns a list of MetaVolume objects. Supports paging  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_meta_volumes(cluster_name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_meta_volumes(cluster_name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: Filter results by name. See LexicalQueryExpression for details.
         :param str health_state: Filter results by health_state. See LexicalQueryExpression for details.
@@ -354,7 +354,7 @@ class MetaVolumeApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_meta_volumes_with_http_info(cluster_name, **kwargs)  # noqa: E501
         else:
             (data) = self.get_meta_volumes_with_http_info(cluster_name, **kwargs)  # noqa: E501
@@ -364,11 +364,11 @@ class MetaVolumeApi(object):
         """Returns a list of MetaVolume objects. Supports paging  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_meta_volumes_with_http_info(cluster_name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_meta_volumes_with_http_info(cluster_name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: Filter results by name. See LexicalQueryExpression for details.
         :param str health_state: Filter results by health_state. See LexicalQueryExpression for details.
@@ -383,7 +383,7 @@ class MetaVolumeApi(object):
         """
 
         all_params = ['cluster_name', 'name', 'health_state', 'operational_status', 'offset', 'limit', 'sort_by', 'fields']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -449,7 +449,7 @@ class MetaVolumeApi(object):
             files=local_var_files,
             response_type='list[MetaVolume]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -460,11 +460,11 @@ class MetaVolumeApi(object):
 
         Settable attributes: 'active' . NOTE: only true value is allowed      # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.patch_meta_volume(cluster_name, name, meta_volume_patch_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.patch_meta_volume(cluster_name, name, meta_volume_patch_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: The name of a specific instance of the resource (required)
         :param list[JsonPatchOp] meta_volume_patch_payload: (required)
@@ -473,7 +473,7 @@ class MetaVolumeApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.patch_meta_volume_with_http_info(cluster_name, name, meta_volume_patch_payload, **kwargs)  # noqa: E501
         else:
             (data) = self.patch_meta_volume_with_http_info(cluster_name, name, meta_volume_patch_payload, **kwargs)  # noqa: E501
@@ -484,11 +484,11 @@ class MetaVolumeApi(object):
 
         Settable attributes: 'active' . NOTE: only true value is allowed      # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.patch_meta_volume_with_http_info(cluster_name, name, meta_volume_patch_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.patch_meta_volume_with_http_info(cluster_name, name, meta_volume_patch_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: The name of a specific instance of the resource (required)
         :param list[JsonPatchOp] meta_volume_patch_payload: (required)
@@ -498,7 +498,7 @@ class MetaVolumeApi(object):
         """
 
         all_params = ['cluster_name', 'name', 'meta_volume_patch_payload']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -556,7 +556,7 @@ class MetaVolumeApi(object):
             files=local_var_files,
             response_type='MetaVolume',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

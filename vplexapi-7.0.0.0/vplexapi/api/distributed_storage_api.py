@@ -37,11 +37,11 @@ class DistributedStorageApi(object):
         """Create a new distributed ConsistencyGroup  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_distributed_consistency_group(distributed_consistency_group_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.create_distributed_consistency_group(distributed_consistency_group_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param DistributedConsistencyGroupPayload distributed_consistency_group_payload: (required)
         :param str x_include_object: When passed as part of a POST request, controls whether the representation of the newly created object is included in the response. Defaults to 'true' which will include the object in the response. This header is useful because refreshing the newly created object is usually the slowest part of a POST operation. 
         :return: ConsistencyGroup
@@ -49,7 +49,7 @@ class DistributedStorageApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.create_distributed_consistency_group_with_http_info(distributed_consistency_group_payload, **kwargs)  # noqa: E501
         else:
             (data) = self.create_distributed_consistency_group_with_http_info(distributed_consistency_group_payload, **kwargs)  # noqa: E501
@@ -59,11 +59,11 @@ class DistributedStorageApi(object):
         """Create a new distributed ConsistencyGroup  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_distributed_consistency_group_with_http_info(distributed_consistency_group_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.create_distributed_consistency_group_with_http_info(distributed_consistency_group_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param DistributedConsistencyGroupPayload distributed_consistency_group_payload: (required)
         :param str x_include_object: When passed as part of a POST request, controls whether the representation of the newly created object is included in the response. Defaults to 'true' which will include the object in the response. This header is useful because refreshing the newly created object is usually the slowest part of a POST operation. 
         :return: ConsistencyGroup
@@ -72,7 +72,7 @@ class DistributedStorageApi(object):
         """
 
         all_params = ['distributed_consistency_group_payload', 'x_include_object']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -120,7 +120,7 @@ class DistributedStorageApi(object):
             files=local_var_files,
             response_type='ConsistencyGroup',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -130,11 +130,11 @@ class DistributedStorageApi(object):
         """Create a new DistributedDevice  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_distributed_device(distributed_device_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.create_distributed_device(distributed_device_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param DistributedDevicePayload distributed_device_payload: (required)
         :param str x_include_object: When passed as part of a POST request, controls whether the representation of the newly created object is included in the response. Defaults to 'true' which will include the object in the response. This header is useful because refreshing the newly created object is usually the slowest part of a POST operation. 
         :return: DistributedDevice
@@ -142,7 +142,7 @@ class DistributedStorageApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.create_distributed_device_with_http_info(distributed_device_payload, **kwargs)  # noqa: E501
         else:
             (data) = self.create_distributed_device_with_http_info(distributed_device_payload, **kwargs)  # noqa: E501
@@ -152,11 +152,11 @@ class DistributedStorageApi(object):
         """Create a new DistributedDevice  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_distributed_device_with_http_info(distributed_device_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.create_distributed_device_with_http_info(distributed_device_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param DistributedDevicePayload distributed_device_payload: (required)
         :param str x_include_object: When passed as part of a POST request, controls whether the representation of the newly created object is included in the response. Defaults to 'true' which will include the object in the response. This header is useful because refreshing the newly created object is usually the slowest part of a POST operation. 
         :return: DistributedDevice
@@ -165,7 +165,7 @@ class DistributedStorageApi(object):
         """
 
         all_params = ['distributed_device_payload', 'x_include_object']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -213,7 +213,7 @@ class DistributedStorageApi(object):
             files=local_var_files,
             response_type='DistributedDevice',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -223,11 +223,11 @@ class DistributedStorageApi(object):
         """Create a new distributed VirtualVolume  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_distributed_virtual_volume(distributed_virtual_volume_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.create_distributed_virtual_volume(distributed_virtual_volume_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param DistributedVirtualVolumePayload distributed_virtual_volume_payload: (required)
         :param str x_include_object: When passed as part of a POST request, controls whether the representation of the newly created object is included in the response. Defaults to 'true' which will include the object in the response. This header is useful because refreshing the newly created object is usually the slowest part of a POST operation. 
         :return: VirtualVolume
@@ -235,7 +235,7 @@ class DistributedStorageApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.create_distributed_virtual_volume_with_http_info(distributed_virtual_volume_payload, **kwargs)  # noqa: E501
         else:
             (data) = self.create_distributed_virtual_volume_with_http_info(distributed_virtual_volume_payload, **kwargs)  # noqa: E501
@@ -245,11 +245,11 @@ class DistributedStorageApi(object):
         """Create a new distributed VirtualVolume  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_distributed_virtual_volume_with_http_info(distributed_virtual_volume_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.create_distributed_virtual_volume_with_http_info(distributed_virtual_volume_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param DistributedVirtualVolumePayload distributed_virtual_volume_payload: (required)
         :param str x_include_object: When passed as part of a POST request, controls whether the representation of the newly created object is included in the response. Defaults to 'true' which will include the object in the response. This header is useful because refreshing the newly created object is usually the slowest part of a POST operation. 
         :return: VirtualVolume
@@ -258,7 +258,7 @@ class DistributedStorageApi(object):
         """
 
         all_params = ['distributed_virtual_volume_payload', 'x_include_object']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -306,7 +306,7 @@ class DistributedStorageApi(object):
             files=local_var_files,
             response_type='VirtualVolume',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -316,18 +316,18 @@ class DistributedStorageApi(object):
         """Deletes a single distributed ConsistencyGroup  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_distributed_consistency_group(name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.delete_distributed_consistency_group(name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.delete_distributed_consistency_group_with_http_info(name, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_distributed_consistency_group_with_http_info(name, **kwargs)  # noqa: E501
@@ -337,11 +337,11 @@ class DistributedStorageApi(object):
         """Deletes a single distributed ConsistencyGroup  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_distributed_consistency_group_with_http_info(name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.delete_distributed_consistency_group_with_http_info(name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :return: None
                  If the method is called asynchronously,
@@ -349,7 +349,7 @@ class DistributedStorageApi(object):
         """
 
         all_params = ['name']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -395,7 +395,7 @@ class DistributedStorageApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -405,18 +405,18 @@ class DistributedStorageApi(object):
         """Deletes a single DistributedDevice  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_distributed_device(name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.delete_distributed_device(name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.delete_distributed_device_with_http_info(name, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_distributed_device_with_http_info(name, **kwargs)  # noqa: E501
@@ -426,11 +426,11 @@ class DistributedStorageApi(object):
         """Deletes a single DistributedDevice  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_distributed_device_with_http_info(name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.delete_distributed_device_with_http_info(name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :return: None
                  If the method is called asynchronously,
@@ -438,7 +438,7 @@ class DistributedStorageApi(object):
         """
 
         all_params = ['name']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -484,7 +484,7 @@ class DistributedStorageApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -494,18 +494,18 @@ class DistributedStorageApi(object):
         """Deletes a single distributed VirtualVolume  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_distributed_virtual_volume(name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.delete_distributed_virtual_volume(name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.delete_distributed_virtual_volume_with_http_info(name, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_distributed_virtual_volume_with_http_info(name, **kwargs)  # noqa: E501
@@ -515,11 +515,11 @@ class DistributedStorageApi(object):
         """Deletes a single distributed VirtualVolume  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_distributed_virtual_volume_with_http_info(name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.delete_distributed_virtual_volume_with_http_info(name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :return: None
                  If the method is called asynchronously,
@@ -527,7 +527,7 @@ class DistributedStorageApi(object):
         """
 
         all_params = ['name']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -573,7 +573,7 @@ class DistributedStorageApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -583,11 +583,11 @@ class DistributedStorageApi(object):
         """Expand the capacity of a distributed VirtualVolume  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.expand_distributed_virtual_volume(name, distributed_virtual_volume_expand_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.expand_distributed_virtual_volume(name, distributed_virtual_volume_expand_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :param DistributedVirtualVolumeExpandPayload distributed_virtual_volume_expand_payload: (required)
         :return: VirtualVolume
@@ -595,7 +595,7 @@ class DistributedStorageApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.expand_distributed_virtual_volume_with_http_info(name, distributed_virtual_volume_expand_payload, **kwargs)  # noqa: E501
         else:
             (data) = self.expand_distributed_virtual_volume_with_http_info(name, distributed_virtual_volume_expand_payload, **kwargs)  # noqa: E501
@@ -605,11 +605,11 @@ class DistributedStorageApi(object):
         """Expand the capacity of a distributed VirtualVolume  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.expand_distributed_virtual_volume_with_http_info(name, distributed_virtual_volume_expand_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.expand_distributed_virtual_volume_with_http_info(name, distributed_virtual_volume_expand_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :param DistributedVirtualVolumeExpandPayload distributed_virtual_volume_expand_payload: (required)
         :return: VirtualVolume
@@ -618,7 +618,7 @@ class DistributedStorageApi(object):
         """
 
         all_params = ['name', 'distributed_virtual_volume_expand_payload']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -670,7 +670,7 @@ class DistributedStorageApi(object):
             files=local_var_files,
             response_type='VirtualVolume',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -680,18 +680,18 @@ class DistributedStorageApi(object):
         """Returns a single distributed ConsistencyGroup object  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_distributed_consistency_group(name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_distributed_consistency_group(name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :return: ConsistencyGroup
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_distributed_consistency_group_with_http_info(name, **kwargs)  # noqa: E501
         else:
             (data) = self.get_distributed_consistency_group_with_http_info(name, **kwargs)  # noqa: E501
@@ -701,11 +701,11 @@ class DistributedStorageApi(object):
         """Returns a single distributed ConsistencyGroup object  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_distributed_consistency_group_with_http_info(name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_distributed_consistency_group_with_http_info(name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :return: ConsistencyGroup
                  If the method is called asynchronously,
@@ -713,7 +713,7 @@ class DistributedStorageApi(object):
         """
 
         all_params = ['name']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -759,7 +759,7 @@ class DistributedStorageApi(object):
             files=local_var_files,
             response_type='ConsistencyGroup',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -769,11 +769,11 @@ class DistributedStorageApi(object):
         """Returns a list of distributed ConsistencyGroups  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_distributed_consistency_groups(async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_distributed_consistency_groups(async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param int offset: Index of the first element to include in paginated results.<br> <b>'limit' must also be specified.</b>
         :param int limit: <p>Maximum number of elements to include in paginated results.<br> <b>'offset' must also be specified.<b>
         :param str name: Filter results by name. See LexicalQueryExpression for details.
@@ -785,7 +785,7 @@ class DistributedStorageApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_distributed_consistency_groups_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_distributed_consistency_groups_with_http_info(**kwargs)  # noqa: E501
@@ -795,11 +795,11 @@ class DistributedStorageApi(object):
         """Returns a list of distributed ConsistencyGroups  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_distributed_consistency_groups_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_distributed_consistency_groups_with_http_info(async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param int offset: Index of the first element to include in paginated results.<br> <b>'limit' must also be specified.</b>
         :param int limit: <p>Maximum number of elements to include in paginated results.<br> <b>'offset' must also be specified.<b>
         :param str name: Filter results by name. See LexicalQueryExpression for details.
@@ -812,7 +812,7 @@ class DistributedStorageApi(object):
         """
 
         all_params = ['offset', 'limit', 'name', 'operational_status', 'sort_by', 'fields']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -870,7 +870,7 @@ class DistributedStorageApi(object):
             files=local_var_files,
             response_type='list[ConsistencyGroup]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -880,11 +880,11 @@ class DistributedStorageApi(object):
         """Returns a single DistributedDevice object  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_distributed_device(name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_distributed_device(name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :param str fields: Select which fields are included in the response. 'name' is always included. See FieldSelectionExpression for details. 
         :return: DistributedDevice
@@ -892,7 +892,7 @@ class DistributedStorageApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_distributed_device_with_http_info(name, **kwargs)  # noqa: E501
         else:
             (data) = self.get_distributed_device_with_http_info(name, **kwargs)  # noqa: E501
@@ -902,11 +902,11 @@ class DistributedStorageApi(object):
         """Returns a single DistributedDevice object  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_distributed_device_with_http_info(name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_distributed_device_with_http_info(name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :param str fields: Select which fields are included in the response. 'name' is always included. See FieldSelectionExpression for details. 
         :return: DistributedDevice
@@ -915,7 +915,7 @@ class DistributedStorageApi(object):
         """
 
         all_params = ['name', 'fields']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -963,7 +963,7 @@ class DistributedStorageApi(object):
             files=local_var_files,
             response_type='DistributedDevice',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -973,11 +973,11 @@ class DistributedStorageApi(object):
         """Returns a list of DistributedDevices  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_distributed_devices(async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_distributed_devices(async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: Filter results by name. See LexicalQueryExpression for details.
         :param str capacity: Filter results by capacity.  See NumericQueryExpression for details.
         :param str thin_capable: Filter results by thin_capable.  See LexicalQueryExpression for details.
@@ -992,7 +992,7 @@ class DistributedStorageApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_distributed_devices_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_distributed_devices_with_http_info(**kwargs)  # noqa: E501
@@ -1002,11 +1002,11 @@ class DistributedStorageApi(object):
         """Returns a list of DistributedDevices  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_distributed_devices_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_distributed_devices_with_http_info(async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: Filter results by name. See LexicalQueryExpression for details.
         :param str capacity: Filter results by capacity.  See NumericQueryExpression for details.
         :param str thin_capable: Filter results by thin_capable.  See LexicalQueryExpression for details.
@@ -1022,7 +1022,7 @@ class DistributedStorageApi(object):
         """
 
         all_params = ['name', 'capacity', 'thin_capable', 'health_state', 'operational_status', 'offset', 'limit', 'sort_by', 'fields']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1090,7 +1090,7 @@ class DistributedStorageApi(object):
             files=local_var_files,
             response_type='list[DistributedDevice]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1100,18 +1100,18 @@ class DistributedStorageApi(object):
         """Returns a single distributed VirtualVolume object  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_distributed_virtual_volume(name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_distributed_virtual_volume(name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :return: VirtualVolume
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_distributed_virtual_volume_with_http_info(name, **kwargs)  # noqa: E501
         else:
             (data) = self.get_distributed_virtual_volume_with_http_info(name, **kwargs)  # noqa: E501
@@ -1121,11 +1121,11 @@ class DistributedStorageApi(object):
         """Returns a single distributed VirtualVolume object  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_distributed_virtual_volume_with_http_info(name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_distributed_virtual_volume_with_http_info(name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :return: VirtualVolume
                  If the method is called asynchronously,
@@ -1133,7 +1133,7 @@ class DistributedStorageApi(object):
         """
 
         all_params = ['name']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1179,7 +1179,7 @@ class DistributedStorageApi(object):
             files=local_var_files,
             response_type='VirtualVolume',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1189,11 +1189,11 @@ class DistributedStorageApi(object):
         """Returns a list of distributed VirtualVolumes  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_distributed_virtual_volumes(async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_distributed_virtual_volumes(async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param int offset: Index of the first element to include in paginated results.<br> <b>'limit' must also be specified.</b>
         :param int limit: <p>Maximum number of elements to include in paginated results.<br> <b>'offset' must also be specified.<b>
         :param str name: Filter results by name. See LexicalQueryExpression for details.
@@ -1210,7 +1210,7 @@ class DistributedStorageApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_distributed_virtual_volumes_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_distributed_virtual_volumes_with_http_info(**kwargs)  # noqa: E501
@@ -1220,11 +1220,11 @@ class DistributedStorageApi(object):
         """Returns a list of distributed VirtualVolumes  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_distributed_virtual_volumes_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_distributed_virtual_volumes_with_http_info(async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param int offset: Index of the first element to include in paginated results.<br> <b>'limit' must also be specified.</b>
         :param int limit: <p>Maximum number of elements to include in paginated results.<br> <b>'offset' must also be specified.<b>
         :param str name: Filter results by name. See LexicalQueryExpression for details.
@@ -1242,7 +1242,7 @@ class DistributedStorageApi(object):
         """
 
         all_params = ['offset', 'limit', 'name', 'capacity', 'sort_by', 'fields', 'consistency_group', 'health_state', 'operational_status', 'service_status', 'thin_enabled']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1310,7 +1310,7 @@ class DistributedStorageApi(object):
             files=local_var_files,
             response_type='list[VirtualVolume]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1320,18 +1320,18 @@ class DistributedStorageApi(object):
         """Returns a single RuleSet object  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_rule_set(name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_rule_set(name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :return: RuleSet
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_rule_set_with_http_info(name, **kwargs)  # noqa: E501
         else:
             (data) = self.get_rule_set_with_http_info(name, **kwargs)  # noqa: E501
@@ -1341,11 +1341,11 @@ class DistributedStorageApi(object):
         """Returns a single RuleSet object  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_rule_set_with_http_info(name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_rule_set_with_http_info(name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :return: RuleSet
                  If the method is called asynchronously,
@@ -1353,7 +1353,7 @@ class DistributedStorageApi(object):
         """
 
         all_params = ['name']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1399,7 +1399,7 @@ class DistributedStorageApi(object):
             files=local_var_files,
             response_type='RuleSet',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1409,11 +1409,11 @@ class DistributedStorageApi(object):
         """Returns a list of RuleSets  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_rule_sets(async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_rule_sets(async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param int offset: Index of the first element to include in paginated results.<br> <b>'limit' must also be specified.</b>
         :param int limit: <p>Maximum number of elements to include in paginated results.<br> <b>'offset' must also be specified.<b>
         :param str name: Filter results by name. See LexicalQueryExpression for details.
@@ -1422,7 +1422,7 @@ class DistributedStorageApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_rule_sets_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_rule_sets_with_http_info(**kwargs)  # noqa: E501
@@ -1432,11 +1432,11 @@ class DistributedStorageApi(object):
         """Returns a list of RuleSets  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_rule_sets_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_rule_sets_with_http_info(async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param int offset: Index of the first element to include in paginated results.<br> <b>'limit' must also be specified.</b>
         :param int limit: <p>Maximum number of elements to include in paginated results.<br> <b>'offset' must also be specified.<b>
         :param str name: Filter results by name. See LexicalQueryExpression for details.
@@ -1446,7 +1446,7 @@ class DistributedStorageApi(object):
         """
 
         all_params = ['offset', 'limit', 'name']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1502,7 +1502,7 @@ class DistributedStorageApi(object):
             files=local_var_files,
             response_type='list[RuleSet]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1513,11 +1513,11 @@ class DistributedStorageApi(object):
 
         Patchable attributes are 'storage_at_clusters' (add/remove), 'virtual_volumes' (add/remove), 'visibility' (add/remove), 'name', 'auto_resume_at_loser' and 'detach_rule'   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.patch_distributed_consistency_group(name, distributed_consistency_group_patch_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.patch_distributed_consistency_group(name, distributed_consistency_group_patch_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :param list[JsonPatchOp] distributed_consistency_group_patch_payload: (required)
         :return: ConsistencyGroup
@@ -1525,7 +1525,7 @@ class DistributedStorageApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.patch_distributed_consistency_group_with_http_info(name, distributed_consistency_group_patch_payload, **kwargs)  # noqa: E501
         else:
             (data) = self.patch_distributed_consistency_group_with_http_info(name, distributed_consistency_group_patch_payload, **kwargs)  # noqa: E501
@@ -1536,11 +1536,11 @@ class DistributedStorageApi(object):
 
         Patchable attributes are 'storage_at_clusters' (add/remove), 'virtual_volumes' (add/remove), 'visibility' (add/remove), 'name', 'auto_resume_at_loser' and 'detach_rule'   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.patch_distributed_consistency_group_with_http_info(name, distributed_consistency_group_patch_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.patch_distributed_consistency_group_with_http_info(name, distributed_consistency_group_patch_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :param list[JsonPatchOp] distributed_consistency_group_patch_payload: (required)
         :return: ConsistencyGroup
@@ -1549,7 +1549,7 @@ class DistributedStorageApi(object):
         """
 
         all_params = ['name', 'distributed_consistency_group_patch_payload']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1601,7 +1601,7 @@ class DistributedStorageApi(object):
             files=local_var_files,
             response_type='ConsistencyGroup',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1612,11 +1612,11 @@ class DistributedStorageApi(object):
 
         Settable attributes: 'name', 'legs', 'transfer_size', 'rule_set_name'   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.patch_distributed_device(name, distributed_device_patch_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.patch_distributed_device(name, distributed_device_patch_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :param list[JsonPatchOp] distributed_device_patch_payload: (required)
         :return: DistributedDevice
@@ -1624,7 +1624,7 @@ class DistributedStorageApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.patch_distributed_device_with_http_info(name, distributed_device_patch_payload, **kwargs)  # noqa: E501
         else:
             (data) = self.patch_distributed_device_with_http_info(name, distributed_device_patch_payload, **kwargs)  # noqa: E501
@@ -1635,11 +1635,11 @@ class DistributedStorageApi(object):
 
         Settable attributes: 'name', 'legs', 'transfer_size', 'rule_set_name'   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.patch_distributed_device_with_http_info(name, distributed_device_patch_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.patch_distributed_device_with_http_info(name, distributed_device_patch_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :param list[JsonPatchOp] distributed_device_patch_payload: (required)
         :return: DistributedDevice
@@ -1648,7 +1648,7 @@ class DistributedStorageApi(object):
         """
 
         all_params = ['name', 'distributed_device_patch_payload']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1700,7 +1700,7 @@ class DistributedStorageApi(object):
             files=local_var_files,
             response_type='DistributedDevice',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1711,11 +1711,11 @@ class DistributedStorageApi(object):
 
         Settable attributes: 'name'   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.patch_distributed_virtual_volume(name, distributed_virtual_volume_patch_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.patch_distributed_virtual_volume(name, distributed_virtual_volume_patch_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :param list[JsonPatchOp] distributed_virtual_volume_patch_payload: (required)
         :return: VirtualVolume
@@ -1723,7 +1723,7 @@ class DistributedStorageApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.patch_distributed_virtual_volume_with_http_info(name, distributed_virtual_volume_patch_payload, **kwargs)  # noqa: E501
         else:
             (data) = self.patch_distributed_virtual_volume_with_http_info(name, distributed_virtual_volume_patch_payload, **kwargs)  # noqa: E501
@@ -1734,11 +1734,11 @@ class DistributedStorageApi(object):
 
         Settable attributes: 'name'   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.patch_distributed_virtual_volume_with_http_info(name, distributed_virtual_volume_patch_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.patch_distributed_virtual_volume_with_http_info(name, distributed_virtual_volume_patch_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :param list[JsonPatchOp] distributed_virtual_volume_patch_payload: (required)
         :return: VirtualVolume
@@ -1747,7 +1747,7 @@ class DistributedStorageApi(object):
         """
 
         all_params = ['name', 'distributed_virtual_volume_patch_payload']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1799,7 +1799,7 @@ class DistributedStorageApi(object):
             files=local_var_files,
             response_type='VirtualVolume',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1809,11 +1809,11 @@ class DistributedStorageApi(object):
         """Manually resume I/O to the virtual-volumes in a distributed consistency group.  In a cluster-partition scenario where the ruleset does not indicate an automatic winner, this endpoint will select the winning cluster where I/O should continue.  After a cluster-partition is resolved, in the case that auto-resume-at-loser is set to false, this endpoint will resume I/O on the losing cluster.   # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.resume(name, cg_resume_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.resume(name, cg_resume_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :param CgResumePayload cg_resume_payload: (required)
         :return: ConsistencyGroup
@@ -1821,7 +1821,7 @@ class DistributedStorageApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.resume_with_http_info(name, cg_resume_payload, **kwargs)  # noqa: E501
         else:
             (data) = self.resume_with_http_info(name, cg_resume_payload, **kwargs)  # noqa: E501
@@ -1831,11 +1831,11 @@ class DistributedStorageApi(object):
         """Manually resume I/O to the virtual-volumes in a distributed consistency group.  In a cluster-partition scenario where the ruleset does not indicate an automatic winner, this endpoint will select the winning cluster where I/O should continue.  After a cluster-partition is resolved, in the case that auto-resume-at-loser is set to false, this endpoint will resume I/O on the losing cluster.   # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.resume_with_http_info(name, cg_resume_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.resume_with_http_info(name, cg_resume_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :param CgResumePayload cg_resume_payload: (required)
         :return: ConsistencyGroup
@@ -1844,7 +1844,7 @@ class DistributedStorageApi(object):
         """
 
         all_params = ['name', 'cg_resume_payload']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1900,7 +1900,7 @@ class DistributedStorageApi(object):
             files=local_var_files,
             response_type='ConsistencyGroup',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1910,18 +1910,18 @@ class DistributedStorageApi(object):
         """Manually resume I/O to a distributed device that supports a distributed virtual-volume.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.resume_link_up(name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.resume_link_up(name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :return: DistributedDevice
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.resume_link_up_with_http_info(name, **kwargs)  # noqa: E501
         else:
             (data) = self.resume_link_up_with_http_info(name, **kwargs)  # noqa: E501
@@ -1931,11 +1931,11 @@ class DistributedStorageApi(object):
         """Manually resume I/O to a distributed device that supports a distributed virtual-volume.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.resume_link_up_with_http_info(name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.resume_link_up_with_http_info(name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :return: DistributedDevice
                  If the method is called asynchronously,
@@ -1943,7 +1943,7 @@ class DistributedStorageApi(object):
         """
 
         all_params = ['name']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1993,7 +1993,7 @@ class DistributedStorageApi(object):
             files=local_var_files,
             response_type='DistributedDevice',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

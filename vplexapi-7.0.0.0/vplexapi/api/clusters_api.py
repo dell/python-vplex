@@ -37,11 +37,11 @@ class ClustersApi(object):
         """Return a Cluster matching the provided name  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_cluster(cluster_name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_cluster(cluster_name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str fields: Select which fields are included in the response. 'name' is always included. See FieldSelectionExpression for details. 
         :return: Cluster
@@ -49,7 +49,7 @@ class ClustersApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_cluster_with_http_info(cluster_name, **kwargs)  # noqa: E501
         else:
             (data) = self.get_cluster_with_http_info(cluster_name, **kwargs)  # noqa: E501
@@ -59,11 +59,11 @@ class ClustersApi(object):
         """Return a Cluster matching the provided name  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_cluster_with_http_info(cluster_name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_cluster_with_http_info(cluster_name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str fields: Select which fields are included in the response. 'name' is always included. See FieldSelectionExpression for details. 
         :return: Cluster
@@ -72,7 +72,7 @@ class ClustersApi(object):
         """
 
         all_params = ['cluster_name', 'fields']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -120,7 +120,7 @@ class ClustersApi(object):
             files=local_var_files,
             response_type='Cluster',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -130,11 +130,11 @@ class ClustersApi(object):
         """Returns a list of the available clusters  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_clusters(async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_clusters(async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param int offset: Index of the first element to include in paginated results.<br> <b>'limit' must also be specified.</b>
         :param int limit: <p>Maximum number of elements to include in paginated results.<br> <b>'offset' must also be specified.<b>
         :param str sort_by: Specify the field priority order and direction for sorting.  See SortingOrderExpression for details. 
@@ -145,7 +145,7 @@ class ClustersApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_clusters_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_clusters_with_http_info(**kwargs)  # noqa: E501
@@ -155,11 +155,11 @@ class ClustersApi(object):
         """Returns a list of the available clusters  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_clusters_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_clusters_with_http_info(async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param int offset: Index of the first element to include in paginated results.<br> <b>'limit' must also be specified.</b>
         :param int limit: <p>Maximum number of elements to include in paginated results.<br> <b>'offset' must also be specified.<b>
         :param str sort_by: Specify the field priority order and direction for sorting.  See SortingOrderExpression for details. 
@@ -171,7 +171,7 @@ class ClustersApi(object):
         """
 
         all_params = ['offset', 'limit', 'sort_by', 'fields', 'cluster_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -227,7 +227,7 @@ class ClustersApi(object):
             files=local_var_files,
             response_type='list[Cluster]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -238,11 +238,11 @@ class ClustersApi(object):
 
         Settable attributes are 'name' and 'allow_auto_join'   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.patch_cluster(cluster_name, cluster_patch_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.patch_cluster(cluster_name, cluster_patch_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param list[JsonPatchOp] cluster_patch_payload: (required)
         :return: Cluster
@@ -250,7 +250,7 @@ class ClustersApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.patch_cluster_with_http_info(cluster_name, cluster_patch_payload, **kwargs)  # noqa: E501
         else:
             (data) = self.patch_cluster_with_http_info(cluster_name, cluster_patch_payload, **kwargs)  # noqa: E501
@@ -261,11 +261,11 @@ class ClustersApi(object):
 
         Settable attributes are 'name' and 'allow_auto_join'   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.patch_cluster_with_http_info(cluster_name, cluster_patch_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.patch_cluster_with_http_info(cluster_name, cluster_patch_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param list[JsonPatchOp] cluster_patch_payload: (required)
         :return: Cluster
@@ -274,7 +274,7 @@ class ClustersApi(object):
         """
 
         all_params = ['cluster_name', 'cluster_patch_payload']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -326,7 +326,7 @@ class ClustersApi(object):
             files=local_var_files,
             response_type='Cluster',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

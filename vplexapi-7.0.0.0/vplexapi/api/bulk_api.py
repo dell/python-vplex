@@ -37,18 +37,18 @@ class BulkApi(object):
         """Make a bulk request  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_request(request, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.bulk_request(request, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param object request: (required)
         :return: BulkResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.bulk_request_with_http_info(request, **kwargs)  # noqa: E501
         else:
             (data) = self.bulk_request_with_http_info(request, **kwargs)  # noqa: E501
@@ -58,11 +58,11 @@ class BulkApi(object):
         """Make a bulk request  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_request_with_http_info(request, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.bulk_request_with_http_info(request, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param object request: (required)
         :return: BulkResponse
                  If the method is called asynchronously,
@@ -70,7 +70,7 @@ class BulkApi(object):
         """
 
         all_params = ['request']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -116,7 +116,7 @@ class BulkApi(object):
             files=local_var_files,
             response_type='BulkResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
