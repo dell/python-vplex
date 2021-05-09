@@ -37,11 +37,11 @@ class PermissionsApi(object):
         """Returns the Role-Based Authentication configuration  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_permissions(async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_permissions(async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param int offset: Index of the first element to include in paginated results.<br> <b>'limit' must also be specified.</b>
         :param int limit: <p>Maximum number of elements to include in paginated results.<br> <b>'offset' must also be specified.<b>
         :param str sort_by: Specify the field priority order and direction for sorting.  See SortingOrderExpression for details. 
@@ -51,7 +51,7 @@ class PermissionsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_permissions_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_permissions_with_http_info(**kwargs)  # noqa: E501
@@ -61,11 +61,11 @@ class PermissionsApi(object):
         """Returns the Role-Based Authentication configuration  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_permissions_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_permissions_with_http_info(async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param int offset: Index of the first element to include in paginated results.<br> <b>'limit' must also be specified.</b>
         :param int limit: <p>Maximum number of elements to include in paginated results.<br> <b>'offset' must also be specified.<b>
         :param str sort_by: Specify the field priority order and direction for sorting.  See SortingOrderExpression for details. 
@@ -76,7 +76,7 @@ class PermissionsApi(object):
         """
 
         all_params = ['offset', 'limit', 'sort_by', 'fields']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -130,7 +130,7 @@ class PermissionsApi(object):
             files=local_var_files,
             response_type='list[Permission]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -140,11 +140,11 @@ class PermissionsApi(object):
         """Return the Role-Based Authentication configuration for one role  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_role(rbac_role, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_role(rbac_role, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str rbac_role: The name of the role (required)
         :param str fields: Select which fields are included in the response. 'name' is always included. See FieldSelectionExpression for details. 
         :return: Permission
@@ -152,7 +152,7 @@ class PermissionsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_role_with_http_info(rbac_role, **kwargs)  # noqa: E501
         else:
             (data) = self.get_role_with_http_info(rbac_role, **kwargs)  # noqa: E501
@@ -162,11 +162,11 @@ class PermissionsApi(object):
         """Return the Role-Based Authentication configuration for one role  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_role_with_http_info(rbac_role, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_role_with_http_info(rbac_role, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str rbac_role: The name of the role (required)
         :param str fields: Select which fields are included in the response. 'name' is always included. See FieldSelectionExpression for details. 
         :return: Permission
@@ -175,7 +175,7 @@ class PermissionsApi(object):
         """
 
         all_params = ['rbac_role', 'fields']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -223,7 +223,7 @@ class PermissionsApi(object):
             files=local_var_files,
             response_type='Permission',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -234,11 +234,11 @@ class PermissionsApi(object):
 
         To add/remove a path pattern rule, use an add/remove patch with path \"/\" and value \"/path/pattern\".  A new path pattern rule is created with all verbs forbidden.  To permit/forbid a verb at an existing path pattern, use an add/remove patch with path \"/path/pattern\" and value \"verb\".   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.patch_permissions(rbac_role, permission_patch_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.patch_permissions(rbac_role, permission_patch_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str rbac_role: The name of the role (required)
         :param list[JsonPatchOp] permission_patch_payload: (required)
         :return: Permission
@@ -246,7 +246,7 @@ class PermissionsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.patch_permissions_with_http_info(rbac_role, permission_patch_payload, **kwargs)  # noqa: E501
         else:
             (data) = self.patch_permissions_with_http_info(rbac_role, permission_patch_payload, **kwargs)  # noqa: E501
@@ -257,11 +257,11 @@ class PermissionsApi(object):
 
         To add/remove a path pattern rule, use an add/remove patch with path \"/\" and value \"/path/pattern\".  A new path pattern rule is created with all verbs forbidden.  To permit/forbid a verb at an existing path pattern, use an add/remove patch with path \"/path/pattern\" and value \"verb\".   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.patch_permissions_with_http_info(rbac_role, permission_patch_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.patch_permissions_with_http_info(rbac_role, permission_patch_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str rbac_role: The name of the role (required)
         :param list[JsonPatchOp] permission_patch_payload: (required)
         :return: Permission
@@ -270,7 +270,7 @@ class PermissionsApi(object):
         """
 
         all_params = ['rbac_role', 'permission_patch_payload']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -322,7 +322,7 @@ class PermissionsApi(object):
             files=local_var_files,
             response_type='Permission',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

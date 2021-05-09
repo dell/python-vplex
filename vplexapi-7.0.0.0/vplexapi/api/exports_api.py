@@ -37,11 +37,11 @@ class ExportsApi(object):
         """Create a new StorageView  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_storage_view(cluster_name, storage_view_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.create_storage_view(cluster_name, storage_view_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param StorageViewPayload storage_view_payload: (required)
         :param str x_include_object: When passed as part of a POST request, controls whether the representation of the newly created object is included in the response. Defaults to 'true' which will include the object in the response. This header is useful because refreshing the newly created object is usually the slowest part of a POST operation. 
@@ -50,7 +50,7 @@ class ExportsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.create_storage_view_with_http_info(cluster_name, storage_view_payload, **kwargs)  # noqa: E501
         else:
             (data) = self.create_storage_view_with_http_info(cluster_name, storage_view_payload, **kwargs)  # noqa: E501
@@ -60,11 +60,11 @@ class ExportsApi(object):
         """Create a new StorageView  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_storage_view_with_http_info(cluster_name, storage_view_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.create_storage_view_with_http_info(cluster_name, storage_view_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param StorageViewPayload storage_view_payload: (required)
         :param str x_include_object: When passed as part of a POST request, controls whether the representation of the newly created object is included in the response. Defaults to 'true' which will include the object in the response. This header is useful because refreshing the newly created object is usually the slowest part of a POST operation. 
@@ -74,7 +74,7 @@ class ExportsApi(object):
         """
 
         all_params = ['cluster_name', 'storage_view_payload', 'x_include_object']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -128,7 +128,7 @@ class ExportsApi(object):
             files=local_var_files,
             response_type='StorageView',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -138,11 +138,11 @@ class ExportsApi(object):
         """Deletes a single StorageView  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_storage_view(cluster_name, name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.delete_storage_view(cluster_name, name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: (required)
         :return: None
@@ -150,7 +150,7 @@ class ExportsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.delete_storage_view_with_http_info(cluster_name, name, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_storage_view_with_http_info(cluster_name, name, **kwargs)  # noqa: E501
@@ -160,11 +160,11 @@ class ExportsApi(object):
         """Deletes a single StorageView  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_storage_view_with_http_info(cluster_name, name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.delete_storage_view_with_http_info(cluster_name, name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: (required)
         :return: None
@@ -173,7 +173,7 @@ class ExportsApi(object):
         """
 
         all_params = ['cluster_name', 'name']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -225,7 +225,7 @@ class ExportsApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -235,11 +235,11 @@ class ExportsApi(object):
         """Returns a single InitiatorPort object  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_initiator_port(cluster_name, name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_initiator_port(cluster_name, name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: The name of a specific instance of the resource (required)
         :param str fields: Select which fields are included in the response. 'name' is always included. See FieldSelectionExpression for details. 
@@ -248,7 +248,7 @@ class ExportsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_initiator_port_with_http_info(cluster_name, name, **kwargs)  # noqa: E501
         else:
             (data) = self.get_initiator_port_with_http_info(cluster_name, name, **kwargs)  # noqa: E501
@@ -258,11 +258,11 @@ class ExportsApi(object):
         """Returns a single InitiatorPort object  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_initiator_port_with_http_info(cluster_name, name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_initiator_port_with_http_info(cluster_name, name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: The name of a specific instance of the resource (required)
         :param str fields: Select which fields are included in the response. 'name' is always included. See FieldSelectionExpression for details. 
@@ -272,7 +272,7 @@ class ExportsApi(object):
         """
 
         all_params = ['cluster_name', 'name', 'fields']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -326,7 +326,7 @@ class ExportsApi(object):
             files=local_var_files,
             response_type='InitiatorPort',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -336,11 +336,11 @@ class ExportsApi(object):
         """Returns a list of InitiatorPort objects  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_initiator_ports(cluster_name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_initiator_ports(cluster_name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: Filter results by name. See LexicalQueryExpression for details.
         :param str type: Filter results by type. See LexicalQueryExpression for details.
@@ -353,7 +353,7 @@ class ExportsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_initiator_ports_with_http_info(cluster_name, **kwargs)  # noqa: E501
         else:
             (data) = self.get_initiator_ports_with_http_info(cluster_name, **kwargs)  # noqa: E501
@@ -363,11 +363,11 @@ class ExportsApi(object):
         """Returns a list of InitiatorPort objects  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_initiator_ports_with_http_info(cluster_name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_initiator_ports_with_http_info(cluster_name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: Filter results by name. See LexicalQueryExpression for details.
         :param str type: Filter results by type. See LexicalQueryExpression for details.
@@ -381,7 +381,7 @@ class ExportsApi(object):
         """
 
         all_params = ['cluster_name', 'name', 'type', 'offset', 'limit', 'sort_by', 'fields']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -445,7 +445,7 @@ class ExportsApi(object):
             files=local_var_files,
             response_type='list[InitiatorPort]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -455,11 +455,11 @@ class ExportsApi(object):
         """Returns a single Port object  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_port(cluster_name, name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_port(cluster_name, name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: The name of a specific instance of the resource (required)
         :return: Port
@@ -467,7 +467,7 @@ class ExportsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_port_with_http_info(cluster_name, name, **kwargs)  # noqa: E501
         else:
             (data) = self.get_port_with_http_info(cluster_name, name, **kwargs)  # noqa: E501
@@ -477,11 +477,11 @@ class ExportsApi(object):
         """Returns a single Port object  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_port_with_http_info(cluster_name, name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_port_with_http_info(cluster_name, name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: The name of a specific instance of the resource (required)
         :return: Port
@@ -490,7 +490,7 @@ class ExportsApi(object):
         """
 
         all_params = ['cluster_name', 'name']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -542,7 +542,7 @@ class ExportsApi(object):
             files=local_var_files,
             response_type='Port',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -552,11 +552,11 @@ class ExportsApi(object):
         """Returns a list of Port objects  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ports(cluster_name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_ports(cluster_name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param int offset: Index of the first element to include in paginated results.<br> <b>'limit' must also be specified.</b>
         :param int limit: <p>Maximum number of elements to include in paginated results.<br> <b>'offset' must also be specified.<b>
@@ -568,7 +568,7 @@ class ExportsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_ports_with_http_info(cluster_name, **kwargs)  # noqa: E501
         else:
             (data) = self.get_ports_with_http_info(cluster_name, **kwargs)  # noqa: E501
@@ -578,11 +578,11 @@ class ExportsApi(object):
         """Returns a list of Port objects  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ports_with_http_info(cluster_name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_ports_with_http_info(cluster_name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param int offset: Index of the first element to include in paginated results.<br> <b>'limit' must also be specified.</b>
         :param int limit: <p>Maximum number of elements to include in paginated results.<br> <b>'offset' must also be specified.<b>
@@ -595,7 +595,7 @@ class ExportsApi(object):
         """
 
         all_params = ['cluster_name', 'offset', 'limit', 'name', 'sort_by', 'fields']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -657,7 +657,7 @@ class ExportsApi(object):
             files=local_var_files,
             response_type='list[Port]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -667,11 +667,11 @@ class ExportsApi(object):
         """Returns a single StorageView  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_storage_view(cluster_name, name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_storage_view(cluster_name, name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: The name of a specific instance of the resource (required)
         :return: StorageView
@@ -679,7 +679,7 @@ class ExportsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_storage_view_with_http_info(cluster_name, name, **kwargs)  # noqa: E501
         else:
             (data) = self.get_storage_view_with_http_info(cluster_name, name, **kwargs)  # noqa: E501
@@ -689,11 +689,11 @@ class ExportsApi(object):
         """Returns a single StorageView  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_storage_view_with_http_info(cluster_name, name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_storage_view_with_http_info(cluster_name, name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: The name of a specific instance of the resource (required)
         :return: StorageView
@@ -702,7 +702,7 @@ class ExportsApi(object):
         """
 
         all_params = ['cluster_name', 'name']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -754,7 +754,7 @@ class ExportsApi(object):
             files=local_var_files,
             response_type='StorageView',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -764,11 +764,11 @@ class ExportsApi(object):
         """Returns a list of StorageView objects  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_storage_views(cluster_name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_storage_views(cluster_name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param int offset: Index of the first element to include in paginated results.<br> <b>'limit' must also be specified.</b>
         :param int limit: <p>Maximum number of elements to include in paginated results.<br> <b>'offset' must also be specified.<b>
@@ -781,7 +781,7 @@ class ExportsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_storage_views_with_http_info(cluster_name, **kwargs)  # noqa: E501
         else:
             (data) = self.get_storage_views_with_http_info(cluster_name, **kwargs)  # noqa: E501
@@ -791,11 +791,11 @@ class ExportsApi(object):
         """Returns a list of StorageView objects  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_storage_views_with_http_info(cluster_name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_storage_views_with_http_info(cluster_name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param int offset: Index of the first element to include in paginated results.<br> <b>'limit' must also be specified.</b>
         :param int limit: <p>Maximum number of elements to include in paginated results.<br> <b>'offset' must also be specified.<b>
@@ -809,7 +809,7 @@ class ExportsApi(object):
         """
 
         all_params = ['cluster_name', 'offset', 'limit', 'name', 'operational_status', 'sort_by', 'fields']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -873,7 +873,7 @@ class ExportsApi(object):
             files=local_var_files,
             response_type='list[StorageView]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -884,11 +884,11 @@ class ExportsApi(object):
 
         Settable attributes: 'name','iops_limit','bandwidth_limit'   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.patch_initiator_port(cluster_name, name, initiator_port_patch_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.patch_initiator_port(cluster_name, name, initiator_port_patch_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: The name of a specific instance of the resource (required)
         :param list[JsonPatchOp] initiator_port_patch_payload: (required)
@@ -897,7 +897,7 @@ class ExportsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.patch_initiator_port_with_http_info(cluster_name, name, initiator_port_patch_payload, **kwargs)  # noqa: E501
         else:
             (data) = self.patch_initiator_port_with_http_info(cluster_name, name, initiator_port_patch_payload, **kwargs)  # noqa: E501
@@ -908,11 +908,11 @@ class ExportsApi(object):
 
         Settable attributes: 'name','iops_limit','bandwidth_limit'   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.patch_initiator_port_with_http_info(cluster_name, name, initiator_port_patch_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.patch_initiator_port_with_http_info(cluster_name, name, initiator_port_patch_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: The name of a specific instance of the resource (required)
         :param list[JsonPatchOp] initiator_port_patch_payload: (required)
@@ -922,7 +922,7 @@ class ExportsApi(object):
         """
 
         all_params = ['cluster_name', 'name', 'initiator_port_patch_payload']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -980,7 +980,7 @@ class ExportsApi(object):
             files=local_var_files,
             response_type='InitiatorPort',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -991,11 +991,11 @@ class ExportsApi(object):
 
         Settable attributes are 'name' and 'enabled'   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.patch_port(cluster_name, name, port_patch_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.patch_port(cluster_name, name, port_patch_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: The name of a specific instance of the resource (required)
         :param list[JsonPatchOp] port_patch_payload: (required)
@@ -1004,7 +1004,7 @@ class ExportsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.patch_port_with_http_info(cluster_name, name, port_patch_payload, **kwargs)  # noqa: E501
         else:
             (data) = self.patch_port_with_http_info(cluster_name, name, port_patch_payload, **kwargs)  # noqa: E501
@@ -1015,11 +1015,11 @@ class ExportsApi(object):
 
         Settable attributes are 'name' and 'enabled'   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.patch_port_with_http_info(cluster_name, name, port_patch_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.patch_port_with_http_info(cluster_name, name, port_patch_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: The name of a specific instance of the resource (required)
         :param list[JsonPatchOp] port_patch_payload: (required)
@@ -1029,7 +1029,7 @@ class ExportsApi(object):
         """
 
         all_params = ['cluster_name', 'name', 'port_patch_payload']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1087,7 +1087,7 @@ class ExportsApi(object):
             files=local_var_files,
             response_type='Port',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1098,11 +1098,11 @@ class ExportsApi(object):
 
         Settable attributes: 'name', 'initiators'(add/remove), 'virtual_volumes'(add/remove), 'ports'(add/remove)   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.patch_storage_view(cluster_name, name, storage_view_patch_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.patch_storage_view(cluster_name, name, storage_view_patch_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: The name of a specific instance of the resource (required)
         :param list[JsonPatchOp] storage_view_patch_payload: (required)
@@ -1112,7 +1112,7 @@ class ExportsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.patch_storage_view_with_http_info(cluster_name, name, storage_view_patch_payload, **kwargs)  # noqa: E501
         else:
             (data) = self.patch_storage_view_with_http_info(cluster_name, name, storage_view_patch_payload, **kwargs)  # noqa: E501
@@ -1123,11 +1123,11 @@ class ExportsApi(object):
 
         Settable attributes: 'name', 'initiators'(add/remove), 'virtual_volumes'(add/remove), 'ports'(add/remove)   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.patch_storage_view_with_http_info(cluster_name, name, storage_view_patch_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.patch_storage_view_with_http_info(cluster_name, name, storage_view_patch_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: The name of a specific instance of the resource (required)
         :param list[JsonPatchOp] storage_view_patch_payload: (required)
@@ -1138,7 +1138,7 @@ class ExportsApi(object):
         """
 
         all_params = ['cluster_name', 'name', 'storage_view_patch_payload', 'allow_multi_fail']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1198,7 +1198,7 @@ class ExportsApi(object):
             files=local_var_files,
             response_type='StorageView',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1208,11 +1208,11 @@ class ExportsApi(object):
         """Rediscover initiator ports  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.rediscover_initiator_ports(cluster_name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.rediscover_initiator_ports(cluster_name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param RediscoverPayload rediscover_payload:
         :return: list[InitiatorPort]
@@ -1220,7 +1220,7 @@ class ExportsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.rediscover_initiator_ports_with_http_info(cluster_name, **kwargs)  # noqa: E501
         else:
             (data) = self.rediscover_initiator_ports_with_http_info(cluster_name, **kwargs)  # noqa: E501
@@ -1230,11 +1230,11 @@ class ExportsApi(object):
         """Rediscover initiator ports  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.rediscover_initiator_ports_with_http_info(cluster_name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.rediscover_initiator_ports_with_http_info(cluster_name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param RediscoverPayload rediscover_payload:
         :return: list[InitiatorPort]
@@ -1243,7 +1243,7 @@ class ExportsApi(object):
         """
 
         all_params = ['cluster_name', 'rediscover_payload']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1291,7 +1291,7 @@ class ExportsApi(object):
             files=local_var_files,
             response_type='list[InitiatorPort]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1301,11 +1301,11 @@ class ExportsApi(object):
         """Registers an InitiatorPort  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.register_initiator_port(cluster_name, register_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.register_initiator_port(cluster_name, register_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param RegisterPayload register_payload: (required)
         :return: InitiatorPort
@@ -1313,7 +1313,7 @@ class ExportsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.register_initiator_port_with_http_info(cluster_name, register_payload, **kwargs)  # noqa: E501
         else:
             (data) = self.register_initiator_port_with_http_info(cluster_name, register_payload, **kwargs)  # noqa: E501
@@ -1323,11 +1323,11 @@ class ExportsApi(object):
         """Registers an InitiatorPort  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.register_initiator_port_with_http_info(cluster_name, register_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.register_initiator_port_with_http_info(cluster_name, register_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param RegisterPayload register_payload: (required)
         :return: InitiatorPort
@@ -1336,7 +1336,7 @@ class ExportsApi(object):
         """
 
         all_params = ['cluster_name', 'register_payload']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1388,7 +1388,7 @@ class ExportsApi(object):
             files=local_var_files,
             response_type='InitiatorPort',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1398,11 +1398,11 @@ class ExportsApi(object):
         """Unregister an InitiatorPort  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.unregister_initiator_port(cluster_name, name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.unregister_initiator_port(cluster_name, name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: The name of a specific instance of the resource (required)
         :return: None
@@ -1410,7 +1410,7 @@ class ExportsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.unregister_initiator_port_with_http_info(cluster_name, name, **kwargs)  # noqa: E501
         else:
             (data) = self.unregister_initiator_port_with_http_info(cluster_name, name, **kwargs)  # noqa: E501
@@ -1420,11 +1420,11 @@ class ExportsApi(object):
         """Unregister an InitiatorPort  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.unregister_initiator_port_with_http_info(cluster_name, name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.unregister_initiator_port_with_http_info(cluster_name, name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: The name of a specific instance of the resource (required)
         :return: None
@@ -1433,7 +1433,7 @@ class ExportsApi(object):
         """
 
         all_params = ['cluster_name', 'name']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1485,7 +1485,7 @@ class ExportsApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

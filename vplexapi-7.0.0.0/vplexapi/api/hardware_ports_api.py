@@ -37,11 +37,11 @@ class HardwarePortsApi(object):
         """Returns a list of hardware ports  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_hardware_ports(async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_hardware_ports(async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param int offset: Index of the first element to include in paginated results.<br> <b>'limit' must also be specified.</b>
         :param int limit: <p>Maximum number of elements to include in paginated results.<br> <b>'offset' must also be specified.<b>
         :param str sort_by: Specify the field priority order and direction for sorting.  See SortingOrderExpression for details. 
@@ -55,7 +55,7 @@ class HardwarePortsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_hardware_ports_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_hardware_ports_with_http_info(**kwargs)  # noqa: E501
@@ -65,11 +65,11 @@ class HardwarePortsApi(object):
         """Returns a list of hardware ports  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_hardware_ports_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_hardware_ports_with_http_info(async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param int offset: Index of the first element to include in paginated results.<br> <b>'limit' must also be specified.</b>
         :param int limit: <p>Maximum number of elements to include in paginated results.<br> <b>'offset' must also be specified.<b>
         :param str sort_by: Specify the field priority order and direction for sorting.  See SortingOrderExpression for details. 
@@ -84,7 +84,7 @@ class HardwarePortsApi(object):
         """
 
         all_params = ['offset', 'limit', 'sort_by', 'fields', 'name', 'director', 'status', 'role']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -146,7 +146,7 @@ class HardwarePortsApi(object):
             files=local_var_files,
             response_type='HardwarePorts',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

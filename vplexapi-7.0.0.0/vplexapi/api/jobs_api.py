@@ -37,18 +37,18 @@ class JobsApi(object):
         """Cancel a vias provisioning job  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.cancel_vias_job(name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.cancel_vias_job(name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :return: ViasJob
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.cancel_vias_job_with_http_info(name, **kwargs)  # noqa: E501
         else:
             (data) = self.cancel_vias_job_with_http_info(name, **kwargs)  # noqa: E501
@@ -58,11 +58,11 @@ class JobsApi(object):
         """Cancel a vias provisioning job  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.cancel_vias_job_with_http_info(name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.cancel_vias_job_with_http_info(name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :return: ViasJob
                  If the method is called asynchronously,
@@ -70,7 +70,7 @@ class JobsApi(object):
         """
 
         all_params = ['name']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -116,7 +116,7 @@ class JobsApi(object):
             files=local_var_files,
             response_type='ViasJob',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -126,18 +126,18 @@ class JobsApi(object):
         """Create a VIAS provisioning job  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_vias_job(vias_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.create_vias_job(vias_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param ViasPayload vias_payload: (required)
         :return: ViasJob
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.create_vias_job_with_http_info(vias_payload, **kwargs)  # noqa: E501
         else:
             (data) = self.create_vias_job_with_http_info(vias_payload, **kwargs)  # noqa: E501
@@ -147,11 +147,11 @@ class JobsApi(object):
         """Create a VIAS provisioning job  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_vias_job_with_http_info(vias_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.create_vias_job_with_http_info(vias_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param ViasPayload vias_payload: (required)
         :return: ViasJob
                  If the method is called asynchronously,
@@ -159,7 +159,7 @@ class JobsApi(object):
         """
 
         all_params = ['vias_payload']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -205,7 +205,7 @@ class JobsApi(object):
             files=local_var_files,
             response_type='ViasJob',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -215,18 +215,18 @@ class JobsApi(object):
         """Delete a VIAS provisioning jobs  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_vias_job(name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.delete_vias_job(name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.delete_vias_job_with_http_info(name, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_vias_job_with_http_info(name, **kwargs)  # noqa: E501
@@ -236,11 +236,11 @@ class JobsApi(object):
         """Delete a VIAS provisioning jobs  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_vias_job_with_http_info(name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.delete_vias_job_with_http_info(name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :return: None
                  If the method is called asynchronously,
@@ -248,7 +248,7 @@ class JobsApi(object):
         """
 
         all_params = ['name']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -294,7 +294,7 @@ class JobsApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -304,11 +304,11 @@ class JobsApi(object):
         """Get the status of a VIAS provisioning job  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_vias_job(name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_vias_job(name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :param str fields: Select which fields are included in the response. 'name' is always included. See FieldSelectionExpression for details. 
         :return: ViasJob
@@ -316,7 +316,7 @@ class JobsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_vias_job_with_http_info(name, **kwargs)  # noqa: E501
         else:
             (data) = self.get_vias_job_with_http_info(name, **kwargs)  # noqa: E501
@@ -326,11 +326,11 @@ class JobsApi(object):
         """Get the status of a VIAS provisioning job  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_vias_job_with_http_info(name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_vias_job_with_http_info(name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :param str fields: Select which fields are included in the response. 'name' is always included. See FieldSelectionExpression for details. 
         :return: ViasJob
@@ -339,7 +339,7 @@ class JobsApi(object):
         """
 
         all_params = ['name', 'fields']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -387,7 +387,7 @@ class JobsApi(object):
             files=local_var_files,
             response_type='ViasJob',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -397,11 +397,11 @@ class JobsApi(object):
         """Get all the current VIAS provisioning jobs  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_vias_jobs(async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_vias_jobs(async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: Filter results by name. See LexicalQueryExpression for details.
         :param str status: Filter results by status. See LexicalQueryExpression for details.
         :param int offset: Index of the first element to include in paginated results.<br> <b>'limit' must also be specified.</b>
@@ -413,7 +413,7 @@ class JobsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_vias_jobs_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_vias_jobs_with_http_info(**kwargs)  # noqa: E501
@@ -423,11 +423,11 @@ class JobsApi(object):
         """Get all the current VIAS provisioning jobs  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_vias_jobs_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_vias_jobs_with_http_info(async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: Filter results by name. See LexicalQueryExpression for details.
         :param str status: Filter results by status. See LexicalQueryExpression for details.
         :param int offset: Index of the first element to include in paginated results.<br> <b>'limit' must also be specified.</b>
@@ -440,7 +440,7 @@ class JobsApi(object):
         """
 
         all_params = ['name', 'status', 'offset', 'limit', 'sort_by', 'fields']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -498,7 +498,7 @@ class JobsApi(object):
             files=local_var_files,
             response_type='list[ViasJob]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -508,18 +508,18 @@ class JobsApi(object):
         """Resubmit a vias provisioning job  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.resubmit_vias_job(name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.resubmit_vias_job(name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :return: ViasJob
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.resubmit_vias_job_with_http_info(name, **kwargs)  # noqa: E501
         else:
             (data) = self.resubmit_vias_job_with_http_info(name, **kwargs)  # noqa: E501
@@ -529,11 +529,11 @@ class JobsApi(object):
         """Resubmit a vias provisioning job  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.resubmit_vias_job_with_http_info(name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.resubmit_vias_job_with_http_info(name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :return: ViasJob
                  If the method is called asynchronously,
@@ -541,7 +541,7 @@ class JobsApi(object):
         """
 
         all_params = ['name']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -587,7 +587,7 @@ class JobsApi(object):
             files=local_var_files,
             response_type='ViasJob',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

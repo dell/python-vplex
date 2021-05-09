@@ -37,11 +37,11 @@ class StorageGroupApi(object):
         """Return details of a given storage group  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_storage_group(cluster_name, storagearray_name, name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_storage_group(cluster_name, storagearray_name, name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str storagearray_name: The name of the storage array (required)
         :param str name: The name of a specific instance of the resource (required)
@@ -51,7 +51,7 @@ class StorageGroupApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_storage_group_with_http_info(cluster_name, storagearray_name, name, **kwargs)  # noqa: E501
         else:
             (data) = self.get_storage_group_with_http_info(cluster_name, storagearray_name, name, **kwargs)  # noqa: E501
@@ -61,11 +61,11 @@ class StorageGroupApi(object):
         """Return details of a given storage group  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_storage_group_with_http_info(cluster_name, storagearray_name, name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_storage_group_with_http_info(cluster_name, storagearray_name, name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str storagearray_name: The name of the storage array (required)
         :param str name: The name of a specific instance of the resource (required)
@@ -76,7 +76,7 @@ class StorageGroupApi(object):
         """
 
         all_params = ['cluster_name', 'storagearray_name', 'name', 'fields']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -136,7 +136,7 @@ class StorageGroupApi(object):
             files=local_var_files,
             response_type='StorageGroup',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -146,11 +146,11 @@ class StorageGroupApi(object):
         """Return the list storage groups  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_storage_groups(cluster_name, storagearray_name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_storage_groups(cluster_name, storagearray_name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str storagearray_name: The name of the storage array (required)
         :param str name: Filter results by name. See LexicalQueryExpression for details.
@@ -165,7 +165,7 @@ class StorageGroupApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_storage_groups_with_http_info(cluster_name, storagearray_name, **kwargs)  # noqa: E501
         else:
             (data) = self.get_storage_groups_with_http_info(cluster_name, storagearray_name, **kwargs)  # noqa: E501
@@ -175,11 +175,11 @@ class StorageGroupApi(object):
         """Return the list storage groups  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_storage_groups_with_http_info(cluster_name, storagearray_name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_storage_groups_with_http_info(cluster_name, storagearray_name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str storagearray_name: The name of the storage array (required)
         :param str name: Filter results by name. See LexicalQueryExpression for details.
@@ -195,7 +195,7 @@ class StorageGroupApi(object):
         """
 
         all_params = ['cluster_name', 'storagearray_name', 'name', 'srp', 'policy', 'offset', 'limit', 'sort_by', 'fields']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -267,7 +267,7 @@ class StorageGroupApi(object):
             files=local_var_files,
             response_type='list[StorageGroup]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

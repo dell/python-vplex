@@ -37,11 +37,11 @@ class DirectorPortsApi(object):
         """Returns a single DirectorPort object  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_director_port(director_name, name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_director_port(director_name, name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str director_name: The name of the director (required)
         :param str name: The name of a specific instance of the resource (required)
         :return: DirectorPort
@@ -49,7 +49,7 @@ class DirectorPortsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_director_port_with_http_info(director_name, name, **kwargs)  # noqa: E501
         else:
             (data) = self.get_director_port_with_http_info(director_name, name, **kwargs)  # noqa: E501
@@ -59,11 +59,11 @@ class DirectorPortsApi(object):
         """Returns a single DirectorPort object  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_director_port_with_http_info(director_name, name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_director_port_with_http_info(director_name, name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str director_name: The name of the director (required)
         :param str name: The name of a specific instance of the resource (required)
         :return: DirectorPort
@@ -72,7 +72,7 @@ class DirectorPortsApi(object):
         """
 
         all_params = ['director_name', 'name']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -124,7 +124,7 @@ class DirectorPortsApi(object):
             files=local_var_files,
             response_type='DirectorPort',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -134,18 +134,18 @@ class DirectorPortsApi(object):
         """Returns a list of director ports  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_director_ports(director_name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_director_ports(director_name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str director_name: The name of the director (required)
         :return: list[DirectorPort]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_director_ports_with_http_info(director_name, **kwargs)  # noqa: E501
         else:
             (data) = self.get_director_ports_with_http_info(director_name, **kwargs)  # noqa: E501
@@ -155,11 +155,11 @@ class DirectorPortsApi(object):
         """Returns a list of director ports  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_director_ports_with_http_info(director_name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_director_ports_with_http_info(director_name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str director_name: The name of the director (required)
         :return: list[DirectorPort]
                  If the method is called asynchronously,
@@ -167,7 +167,7 @@ class DirectorPortsApi(object):
         """
 
         all_params = ['director_name']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -213,7 +213,7 @@ class DirectorPortsApi(object):
             files=local_var_files,
             response_type='list[DirectorPort]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -224,11 +224,11 @@ class DirectorPortsApi(object):
 
         Settable attribute is 'enabled'   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.patch_director_port(director_name, name, port_patch_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.patch_director_port(director_name, name, port_patch_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str director_name: The name of the director (required)
         :param str name: The name of a specific instance of the resource (required)
         :param list[JsonPatchOp] port_patch_payload: (required)
@@ -237,7 +237,7 @@ class DirectorPortsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.patch_director_port_with_http_info(director_name, name, port_patch_payload, **kwargs)  # noqa: E501
         else:
             (data) = self.patch_director_port_with_http_info(director_name, name, port_patch_payload, **kwargs)  # noqa: E501
@@ -248,11 +248,11 @@ class DirectorPortsApi(object):
 
         Settable attribute is 'enabled'   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.patch_director_port_with_http_info(director_name, name, port_patch_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.patch_director_port_with_http_info(director_name, name, port_patch_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str director_name: The name of the director (required)
         :param str name: The name of a specific instance of the resource (required)
         :param list[JsonPatchOp] port_patch_payload: (required)
@@ -262,7 +262,7 @@ class DirectorPortsApi(object):
         """
 
         all_params = ['director_name', 'name', 'port_patch_payload']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -320,7 +320,7 @@ class DirectorPortsApi(object):
             files=local_var_files,
             response_type='DirectorPort',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

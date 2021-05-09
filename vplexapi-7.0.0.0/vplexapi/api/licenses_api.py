@@ -37,18 +37,18 @@ class LicensesApi(object):
         """Deletes the licenses  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_licenses(cluster_name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.delete_licenses(cluster_name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.delete_licenses_with_http_info(cluster_name, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_licenses_with_http_info(cluster_name, **kwargs)  # noqa: E501
@@ -58,11 +58,11 @@ class LicensesApi(object):
         """Deletes the licenses  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_licenses_with_http_info(cluster_name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.delete_licenses_with_http_info(cluster_name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :return: None
                  If the method is called asynchronously,
@@ -70,7 +70,7 @@ class LicensesApi(object):
         """
 
         all_params = ['cluster_name']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -116,7 +116,7 @@ class LicensesApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -126,11 +126,11 @@ class LicensesApi(object):
         """Returns a list of installed licenses on the setup  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_license_info(cluster_name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_license_info(cluster_name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param int offset: Index of the first element to include in paginated results.<br> <b>'limit' must also be specified.</b>
         :param int limit: <p>Maximum number of elements to include in paginated results.<br> <b>'offset' must also be specified.<b>
@@ -141,7 +141,7 @@ class LicensesApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_license_info_with_http_info(cluster_name, **kwargs)  # noqa: E501
         else:
             (data) = self.get_license_info_with_http_info(cluster_name, **kwargs)  # noqa: E501
@@ -151,11 +151,11 @@ class LicensesApi(object):
         """Returns a list of installed licenses on the setup  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_license_info_with_http_info(cluster_name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_license_info_with_http_info(cluster_name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param int offset: Index of the first element to include in paginated results.<br> <b>'limit' must also be specified.</b>
         :param int limit: <p>Maximum number of elements to include in paginated results.<br> <b>'offset' must also be specified.<b>
@@ -167,7 +167,7 @@ class LicensesApi(object):
         """
 
         all_params = ['cluster_name', 'offset', 'limit', 'sort_by', 'fields']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -227,7 +227,7 @@ class LicensesApi(object):
             files=local_var_files,
             response_type='LicenseArray',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -237,11 +237,11 @@ class LicensesApi(object):
         """Install a new license file  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.install_license(cluster_name, license_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.install_license(cluster_name, license_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param LicensePayload license_payload: (required)
         :param bool validate:
@@ -250,7 +250,7 @@ class LicensesApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.install_license_with_http_info(cluster_name, license_payload, **kwargs)  # noqa: E501
         else:
             (data) = self.install_license_with_http_info(cluster_name, license_payload, **kwargs)  # noqa: E501
@@ -260,11 +260,11 @@ class LicensesApi(object):
         """Install a new license file  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.install_license_with_http_info(cluster_name, license_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.install_license_with_http_info(cluster_name, license_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param LicensePayload license_payload: (required)
         :param bool validate:
@@ -274,7 +274,7 @@ class LicensesApi(object):
         """
 
         all_params = ['cluster_name', 'license_payload', 'validate']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -332,7 +332,7 @@ class LicensesApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -342,11 +342,11 @@ class LicensesApi(object):
         """Validate a license file  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.validate_license(cluster_name, validate_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.validate_license(cluster_name, validate_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param ValidatePayload validate_payload: (required)
         :return: None
@@ -354,7 +354,7 @@ class LicensesApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.validate_license_with_http_info(cluster_name, validate_payload, **kwargs)  # noqa: E501
         else:
             (data) = self.validate_license_with_http_info(cluster_name, validate_payload, **kwargs)  # noqa: E501
@@ -364,11 +364,11 @@ class LicensesApi(object):
         """Validate a license file  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.validate_license_with_http_info(cluster_name, validate_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.validate_license_with_http_info(cluster_name, validate_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param ValidatePayload validate_payload: (required)
         :return: None
@@ -377,7 +377,7 @@ class LicensesApi(object):
         """
 
         all_params = ['cluster_name', 'validate_payload']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -429,7 +429,7 @@ class LicensesApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

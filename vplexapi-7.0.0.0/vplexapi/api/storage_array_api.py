@@ -37,11 +37,11 @@ class StorageArrayApi(object):
         """Get the default name mapping for claimable volumes on this array  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_name_mapping(cluster_name, name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_name_mapping(cluster_name, name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: The name of a specific instance of the resource (required)
         :return: InlineResponse200
@@ -49,7 +49,7 @@ class StorageArrayApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_name_mapping_with_http_info(cluster_name, name, **kwargs)  # noqa: E501
         else:
             (data) = self.get_name_mapping_with_http_info(cluster_name, name, **kwargs)  # noqa: E501
@@ -59,11 +59,11 @@ class StorageArrayApi(object):
         """Get the default name mapping for claimable volumes on this array  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_name_mapping_with_http_info(cluster_name, name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_name_mapping_with_http_info(cluster_name, name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: The name of a specific instance of the resource (required)
         :return: InlineResponse200
@@ -72,7 +72,7 @@ class StorageArrayApi(object):
         """
 
         all_params = ['cluster_name', 'name']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -124,7 +124,7 @@ class StorageArrayApi(object):
             files=local_var_files,
             response_type='InlineResponse200',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -134,11 +134,11 @@ class StorageArrayApi(object):
         """Returns a single StorageArray by name  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_storage_array(cluster_name, name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_storage_array(cluster_name, name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: The name of a specific instance of the resource (required)
         :param str fields: Select which fields are included in the response. 'name' is always included. See FieldSelectionExpression for details. 
@@ -147,7 +147,7 @@ class StorageArrayApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_storage_array_with_http_info(cluster_name, name, **kwargs)  # noqa: E501
         else:
             (data) = self.get_storage_array_with_http_info(cluster_name, name, **kwargs)  # noqa: E501
@@ -157,11 +157,11 @@ class StorageArrayApi(object):
         """Returns a single StorageArray by name  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_storage_array_with_http_info(cluster_name, name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_storage_array_with_http_info(cluster_name, name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: The name of a specific instance of the resource (required)
         :param str fields: Select which fields are included in the response. 'name' is always included. See FieldSelectionExpression for details. 
@@ -171,7 +171,7 @@ class StorageArrayApi(object):
         """
 
         all_params = ['cluster_name', 'name', 'fields']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -225,7 +225,7 @@ class StorageArrayApi(object):
             files=local_var_files,
             response_type='StorageArray',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -235,11 +235,11 @@ class StorageArrayApi(object):
         """Returns a list of StorageArrays  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_storage_arrays(cluster_name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_storage_arrays(cluster_name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: Filter results by name. See LexicalQueryExpression for details.
         :param str logical_unit_count: Filter results by logical_unit_count. See NumericQueryExpression for details.
@@ -253,7 +253,7 @@ class StorageArrayApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_storage_arrays_with_http_info(cluster_name, **kwargs)  # noqa: E501
         else:
             (data) = self.get_storage_arrays_with_http_info(cluster_name, **kwargs)  # noqa: E501
@@ -263,11 +263,11 @@ class StorageArrayApi(object):
         """Returns a list of StorageArrays  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_storage_arrays_with_http_info(cluster_name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_storage_arrays_with_http_info(cluster_name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: Filter results by name. See LexicalQueryExpression for details.
         :param str logical_unit_count: Filter results by logical_unit_count. See NumericQueryExpression for details.
@@ -282,7 +282,7 @@ class StorageArrayApi(object):
         """
 
         all_params = ['cluster_name', 'name', 'logical_unit_count', 'connectivity_status', 'offset', 'limit', 'sort_by', 'fields']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -348,7 +348,7 @@ class StorageArrayApi(object):
             files=local_var_files,
             response_type='list[StorageArray]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -358,11 +358,11 @@ class StorageArrayApi(object):
         """Rediscover LUNs on the array  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.rediscover_storage_array(cluster_name, name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.rediscover_storage_array(cluster_name, name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: The name of a specific instance of the resource (required)
         :return: StorageArray
@@ -370,7 +370,7 @@ class StorageArrayApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.rediscover_storage_array_with_http_info(cluster_name, name, **kwargs)  # noqa: E501
         else:
             (data) = self.rediscover_storage_array_with_http_info(cluster_name, name, **kwargs)  # noqa: E501
@@ -380,11 +380,11 @@ class StorageArrayApi(object):
         """Rediscover LUNs on the array  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.rediscover_storage_array_with_http_info(cluster_name, name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.rediscover_storage_array_with_http_info(cluster_name, name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str cluster_name: The name of the cluster (required)
         :param str name: The name of a specific instance of the resource (required)
         :return: StorageArray
@@ -393,7 +393,7 @@ class StorageArrayApi(object):
         """
 
         all_params = ['cluster_name', 'name']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -445,7 +445,7 @@ class StorageArrayApi(object):
             files=local_var_files,
             response_type='StorageArray',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

@@ -37,18 +37,18 @@ class DataMigrationApi(object):
         """Create a new DeviceMigration  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_device_migration(device_migration_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.create_device_migration(device_migration_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param DeviceMigrationPayload device_migration_payload: (required)
         :return: DeviceMigration
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.create_device_migration_with_http_info(device_migration_payload, **kwargs)  # noqa: E501
         else:
             (data) = self.create_device_migration_with_http_info(device_migration_payload, **kwargs)  # noqa: E501
@@ -58,11 +58,11 @@ class DataMigrationApi(object):
         """Create a new DeviceMigration  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_device_migration_with_http_info(device_migration_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.create_device_migration_with_http_info(device_migration_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param DeviceMigrationPayload device_migration_payload: (required)
         :return: DeviceMigration
                  If the method is called asynchronously,
@@ -70,7 +70,7 @@ class DataMigrationApi(object):
         """
 
         all_params = ['device_migration_payload']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -116,7 +116,7 @@ class DataMigrationApi(object):
             files=local_var_files,
             response_type='DeviceMigration',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -126,18 +126,18 @@ class DataMigrationApi(object):
         """Create a new ExtentMigration  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_extent_migration(extent_migration_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.create_extent_migration(extent_migration_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param ExtentMigrationPayload extent_migration_payload: (required)
         :return: ExtentMigration
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.create_extent_migration_with_http_info(extent_migration_payload, **kwargs)  # noqa: E501
         else:
             (data) = self.create_extent_migration_with_http_info(extent_migration_payload, **kwargs)  # noqa: E501
@@ -147,11 +147,11 @@ class DataMigrationApi(object):
         """Create a new ExtentMigration  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_extent_migration_with_http_info(extent_migration_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.create_extent_migration_with_http_info(extent_migration_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param ExtentMigrationPayload extent_migration_payload: (required)
         :return: ExtentMigration
                  If the method is called asynchronously,
@@ -159,7 +159,7 @@ class DataMigrationApi(object):
         """
 
         all_params = ['extent_migration_payload']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -205,7 +205,7 @@ class DataMigrationApi(object):
             files=local_var_files,
             response_type='ExtentMigration',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -215,18 +215,18 @@ class DataMigrationApi(object):
         """Deletes a single canceled or committed DeviceMigration  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_device_migration(name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.delete_device_migration(name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.delete_device_migration_with_http_info(name, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_device_migration_with_http_info(name, **kwargs)  # noqa: E501
@@ -236,11 +236,11 @@ class DataMigrationApi(object):
         """Deletes a single canceled or committed DeviceMigration  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_device_migration_with_http_info(name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.delete_device_migration_with_http_info(name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :return: None
                  If the method is called asynchronously,
@@ -248,7 +248,7 @@ class DataMigrationApi(object):
         """
 
         all_params = ['name']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -294,7 +294,7 @@ class DataMigrationApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -304,18 +304,18 @@ class DataMigrationApi(object):
         """Deletes a single canceled or committed ExtentMigration  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_extent_migration(name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.delete_extent_migration(name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.delete_extent_migration_with_http_info(name, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_extent_migration_with_http_info(name, **kwargs)  # noqa: E501
@@ -325,11 +325,11 @@ class DataMigrationApi(object):
         """Deletes a single canceled or committed ExtentMigration  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_extent_migration_with_http_info(name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.delete_extent_migration_with_http_info(name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :return: None
                  If the method is called asynchronously,
@@ -337,7 +337,7 @@ class DataMigrationApi(object):
         """
 
         all_params = ['name']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -383,7 +383,7 @@ class DataMigrationApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -393,11 +393,11 @@ class DataMigrationApi(object):
         """Returns a single DeviceMigration object  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_device_migration(name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_device_migration(name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :param str fields: Select which fields are included in the response. 'name' is always included. See FieldSelectionExpression for details. 
         :return: DeviceMigration
@@ -405,7 +405,7 @@ class DataMigrationApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_device_migration_with_http_info(name, **kwargs)  # noqa: E501
         else:
             (data) = self.get_device_migration_with_http_info(name, **kwargs)  # noqa: E501
@@ -415,11 +415,11 @@ class DataMigrationApi(object):
         """Returns a single DeviceMigration object  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_device_migration_with_http_info(name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_device_migration_with_http_info(name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :param str fields: Select which fields are included in the response. 'name' is always included. See FieldSelectionExpression for details. 
         :return: DeviceMigration
@@ -428,7 +428,7 @@ class DataMigrationApi(object):
         """
 
         all_params = ['name', 'fields']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -476,7 +476,7 @@ class DataMigrationApi(object):
             files=local_var_files,
             response_type='DeviceMigration',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -486,11 +486,11 @@ class DataMigrationApi(object):
         """Returns a list of device migrations  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_device_migrations(async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_device_migrations(async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: Filter results by name. See LexicalQueryExpression for details.
         :param str to_cluster: Filter results by to_cluster. See LexicalQueryExpression for details.
         :param str from_cluster: Filter results by from_cluster. See LexicalQueryExpression for details.
@@ -503,7 +503,7 @@ class DataMigrationApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_device_migrations_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_device_migrations_with_http_info(**kwargs)  # noqa: E501
@@ -513,11 +513,11 @@ class DataMigrationApi(object):
         """Returns a list of device migrations  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_device_migrations_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_device_migrations_with_http_info(async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: Filter results by name. See LexicalQueryExpression for details.
         :param str to_cluster: Filter results by to_cluster. See LexicalQueryExpression for details.
         :param str from_cluster: Filter results by from_cluster. See LexicalQueryExpression for details.
@@ -531,7 +531,7 @@ class DataMigrationApi(object):
         """
 
         all_params = ['name', 'to_cluster', 'from_cluster', 'offset', 'limit', 'sort_by', 'fields']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -591,7 +591,7 @@ class DataMigrationApi(object):
             files=local_var_files,
             response_type='list[DeviceMigration]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -601,11 +601,11 @@ class DataMigrationApi(object):
         """Returns a single ExtentMigration object  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_extent_migration(name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_extent_migration(name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :param str fields: Select which fields are included in the response. 'name' is always included. See FieldSelectionExpression for details. 
         :return: ExtentMigration
@@ -613,7 +613,7 @@ class DataMigrationApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_extent_migration_with_http_info(name, **kwargs)  # noqa: E501
         else:
             (data) = self.get_extent_migration_with_http_info(name, **kwargs)  # noqa: E501
@@ -623,11 +623,11 @@ class DataMigrationApi(object):
         """Returns a single ExtentMigration object  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_extent_migration_with_http_info(name, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_extent_migration_with_http_info(name, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :param str fields: Select which fields are included in the response. 'name' is always included. See FieldSelectionExpression for details. 
         :return: ExtentMigration
@@ -636,7 +636,7 @@ class DataMigrationApi(object):
         """
 
         all_params = ['name', 'fields']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -684,7 +684,7 @@ class DataMigrationApi(object):
             files=local_var_files,
             response_type='ExtentMigration',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -694,11 +694,11 @@ class DataMigrationApi(object):
         """Returns a list of extent migrations  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_extent_migrations(async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_extent_migrations(async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: Filter results by name. See LexicalQueryExpression for details.
         :param str to_cluster: Filter results by to_cluster. See LexicalQueryExpression for details.
         :param str from_cluster: Filter results by from_cluster. See LexicalQueryExpression for details.
@@ -711,7 +711,7 @@ class DataMigrationApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_extent_migrations_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_extent_migrations_with_http_info(**kwargs)  # noqa: E501
@@ -721,11 +721,11 @@ class DataMigrationApi(object):
         """Returns a list of extent migrations  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_extent_migrations_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_extent_migrations_with_http_info(async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: Filter results by name. See LexicalQueryExpression for details.
         :param str to_cluster: Filter results by to_cluster. See LexicalQueryExpression for details.
         :param str from_cluster: Filter results by from_cluster. See LexicalQueryExpression for details.
@@ -739,7 +739,7 @@ class DataMigrationApi(object):
         """
 
         all_params = ['name', 'to_cluster', 'from_cluster', 'offset', 'limit', 'sort_by', 'fields']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -799,7 +799,7 @@ class DataMigrationApi(object):
             files=local_var_files,
             response_type='list[ExtentMigration]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -810,11 +810,11 @@ class DataMigrationApi(object):
 
         Settable attributes: 'name', 'transfer_size' and 'status'(replace)   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.patch_device_migration(name, device_migration_patch_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.patch_device_migration(name, device_migration_patch_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :param list[JsonPatchOp] device_migration_patch_payload: (required)
         :return: DeviceMigration
@@ -822,7 +822,7 @@ class DataMigrationApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.patch_device_migration_with_http_info(name, device_migration_patch_payload, **kwargs)  # noqa: E501
         else:
             (data) = self.patch_device_migration_with_http_info(name, device_migration_patch_payload, **kwargs)  # noqa: E501
@@ -833,11 +833,11 @@ class DataMigrationApi(object):
 
         Settable attributes: 'name', 'transfer_size' and 'status'(replace)   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.patch_device_migration_with_http_info(name, device_migration_patch_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.patch_device_migration_with_http_info(name, device_migration_patch_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :param list[JsonPatchOp] device_migration_patch_payload: (required)
         :return: DeviceMigration
@@ -846,7 +846,7 @@ class DataMigrationApi(object):
         """
 
         all_params = ['name', 'device_migration_patch_payload']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -898,7 +898,7 @@ class DataMigrationApi(object):
             files=local_var_files,
             response_type='DeviceMigration',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -909,11 +909,11 @@ class DataMigrationApi(object):
 
         Settable attributes: 'name', 'transfer_size' and 'status'(replace)   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.patch_extent_migration(name, extent_migration_patch_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.patch_extent_migration(name, extent_migration_patch_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :param list[JsonPatchOp] extent_migration_patch_payload: (required)
         :return: ExtentMigration
@@ -921,7 +921,7 @@ class DataMigrationApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.patch_extent_migration_with_http_info(name, extent_migration_patch_payload, **kwargs)  # noqa: E501
         else:
             (data) = self.patch_extent_migration_with_http_info(name, extent_migration_patch_payload, **kwargs)  # noqa: E501
@@ -932,11 +932,11 @@ class DataMigrationApi(object):
 
         Settable attributes: 'name', 'transfer_size' and 'status'(replace)   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.patch_extent_migration_with_http_info(name, extent_migration_patch_payload, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.patch_extent_migration_with_http_info(name, extent_migration_patch_payload, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str name: The name of a specific instance of the resource (required)
         :param list[JsonPatchOp] extent_migration_patch_payload: (required)
         :return: ExtentMigration
@@ -945,7 +945,7 @@ class DataMigrationApi(object):
         """
 
         all_params = ['name', 'extent_migration_patch_payload']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -997,7 +997,7 @@ class DataMigrationApi(object):
             files=local_var_files,
             response_type='ExtentMigration',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

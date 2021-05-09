@@ -37,11 +37,11 @@ class AggregateApi(object):
         """Groups the resources at the given URI by the values of the provided fields and returns aggregated computations for each group   # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_aggregates(uri, group_by, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_aggregates(uri, group_by, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str uri: URI of collection to aggregate (required)
         :param str group_by: Comma-separated list of fields to aggregate on (required)
         :return: Aggregates
@@ -49,7 +49,7 @@ class AggregateApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_http_request'):
             return self.get_aggregates_with_http_info(uri, group_by, **kwargs)  # noqa: E501
         else:
             (data) = self.get_aggregates_with_http_info(uri, group_by, **kwargs)  # noqa: E501
@@ -59,11 +59,11 @@ class AggregateApi(object):
         """Groups the resources at the given URI by the values of the provided fields and returns aggregated computations for each group   # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_aggregates_with_http_info(uri, group_by, async=True)
+        asynchronous HTTP request, please pass async_http_request=True
+        >>> thread = api.get_aggregates_with_http_info(uri, group_by, async_http_request=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_http_request bool
         :param str uri: URI of collection to aggregate (required)
         :param str group_by: Comma-separated list of fields to aggregate on (required)
         :return: Aggregates
@@ -72,7 +72,7 @@ class AggregateApi(object):
         """
 
         all_params = ['uri', 'group_by']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_http_request')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -124,7 +124,7 @@ class AggregateApi(object):
             files=local_var_files,
             response_type='Aggregates',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_http_request=params.get('async_http_request'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
